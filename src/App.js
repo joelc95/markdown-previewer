@@ -1,8 +1,14 @@
 import React from 'react';
+import Prism from 'prismjs';
 import { marked } from 'marked';
+import '../src/prism.css'
+import '../src/style.css'
 
 marked.setOptions({
   breaks: true,
+  highlight: function (code) {
+    return Prism.highlight(code, Prism.languages.javascript, 'javascript')
+  }
 })
 
 const placeholder = `

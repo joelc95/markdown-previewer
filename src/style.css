@@ -1,0 +1,11 @@
+table, th, td {
+  border: black solid 1px;
+}
+
+pre {
+  background-color: white;
+}
+
+code {
+  background-color: white;
+}
