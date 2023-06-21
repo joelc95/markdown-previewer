@@ -12,7 +12,7 @@ marked.setOptions({
 })
 
 const placeholder = `
-#This is my React Markdown Previewer
+# This is my React Markdown Previewer
 
 ## This is a sub-heading...
 ### And here is some other stuff:

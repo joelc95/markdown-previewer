@@ -9,3 +9,8 @@ pre {
 code {
   background-color: white;
 }
+
+blockquote {
+  border-left: black solid 4px;
+  font-style: italic;
+}
