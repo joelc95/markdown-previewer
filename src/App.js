@@ -57,29 +57,29 @@ And here. | Okay. | I think we get it.
 1. And last but not least, let's not forget embedded images:
 
 ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
-\`\`\`
-
 `
 
 const App = () => {
   const [markdown, setMarkdown] = React.useState(placeholder);
+  
+  const inputHandler = (e) => {
+    setMarkdown(e.target.value);
+  }
 
   const inputStyling = {
-    width: '80%',
-    height: '50vh',
+    width: '100%',
+    height: '60vh',
     marginLeft: 'auto',
     marginRight: 'auto',
     padding: '10px'
   };
 
-  const inputHandler = (e) => {
-    setMarkdown(e.target.value);
-  }
 
   const outputStyling = {
-    width: '90%',
+    width: '100%',
     height: 'fit-content',
-    backgroundColor: '#dcdcdc',
+    backgroundColor: '#e9c46a',
+    color: '#d15f43',
     marginLeft: 'auto',
     marginRight: 'auto',
     padding: '10px',
@@ -90,24 +90,24 @@ const App = () => {
     <div className="container">
     <h1 className="d-flex justify-content-center">Markdown Previewer</h1>
     <div className='row'>
-      <div className="border border-primary col-md-6 text-center">
-        <h2>Editor here</h2>
+      <div id="editor-container" className="m-2 col-md-4">
+        <div id="editor-header" className='toolbar'><h2>Editor here</h2></div>
         <div className="editor-input">
           <textarea style={inputStyling} 
                     className="input" 
                     value={markdown}
-                    onChange={inputHandler}>
-                      {console.log(markdown)}
+                    onChange={inputHandler}
+                    id="editor">
           </textarea>
         </div>
       </div>
 
-      <div className="border border-danger col-md-6">
-        <h2 className='text-center'>Preview here</h2>
+      <div id="preview-container" className="col-md-7">
+        <div id="preview-header"><h2 className='toolbar text-center mb-0'>Preview here</h2></div>
         <div style={outputStyling} 
             className="output-area"
             dangerouslySetInnerHTML={{__html: marked(markdown)}}
-        >
+            id="preview">
         </div>
       </div>
     </div>
