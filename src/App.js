@@ -78,8 +78,8 @@ const App = () => {
   const outputStyling = {
     width: '100%',
     height: 'fit-content',
-    backgroundColor: '#e9c46a',
-    color: '#d15f43',
+    backgroundColor: '#dddddd',
+    color: '#000000',
     marginLeft: 'auto',
     marginRight: 'auto',
     padding: '10px',
@@ -88,7 +88,7 @@ const App = () => {
 
   return (
     <div className="container">
-    <h1 className="d-flex justify-content-center">Markdown Previewer</h1>
+    <h1 id="webpage-header" className="d-flex justify-content-center">Markdown Previewer</h1>
     <div className='row'>
       <div id="editor-container" className="m-2 col-md-4">
         <div id="editor-header" className='toolbar'><h2>Editor here</h2></div>
